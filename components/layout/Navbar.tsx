@@ -52,7 +52,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="#home" className="flex items-center space-x-2">
           <Code size={28} className="text-primary" />
-          <span className="font-bold text-xl">Bangalore Blizz</span>
+          <span className="font-bold text-xl">Silicon Blizz</span>
         </Link>
 
         {/* Desktop Navigation */}

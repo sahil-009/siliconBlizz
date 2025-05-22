@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Code size={24} className="text-primary" />
-              <span className="font-bold text-xl">Bangalore Blizz</span>
+              <span className="font-bold text-xl">Silicon Blizz</span>
             </div>
             <p className="text-muted-foreground">
               We create budget-friendly websites and apps for professionals and small businesses.
@@ -100,7 +100,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} Bangalore Blizz. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Silicon Blizz. All rights reserved.</p>
         </div>
       </div>
     </footer>

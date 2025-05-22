@@ -21,7 +21,7 @@ const testimonials: Testimonial[] = [
     position: "Dentist",
     company: "Smile Dental Clinic",
     image: "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    quote: "Bangalore Blizz created a beautiful website for my dental practice that perfectly represents our brand. Patient bookings have increased by 30% since launch!",
+    quote: "Silicon Blizz created a beautiful website for my dental practice that perfectly represents our brand. Patient bookings have increased by 30% since launch!",
     rating: 5,
   },
   {
@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
     position: "Owner",
     company: "Organic Foods",
     image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    quote: "Working with Bangalore Blizz was a breeze! They helped our small business establish an online store that matches our brand perfectly. Sales have improved significantly!",
+    quote: "Working with Silicon Blizz was a breeze! They helped our small business establish an online store that matches our brand perfectly. Sales have improved significantly!",
     rating: 4,
   },
 ];
