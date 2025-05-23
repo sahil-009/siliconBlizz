@@ -23,7 +23,7 @@ export default function HeroSection() {
             className="md:col-span-7 space-y-6"
           >
             <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              Website & App Development Agency
+              Website & App Development Company
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Get a Website That <span className="text-primary">Works</span> for You.
