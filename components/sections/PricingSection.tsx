@@ -6,23 +6,27 @@ import { motion } from "framer-motion";
 import { Check, X, ArrowRight } from "lucide-react";
 import { fadeIn } from "@/lib/animations";
 
-interface PricingFeature {
+type PricingFeature = {
   title: string;
-  basic: boolean;
-  pro: boolean;
-  premium: boolean;
-}
+  starter: boolean | string;
+  premium: boolean | string;
+  elite: boolean | string;
+};
 
 const features: PricingFeature[] = [
-  { title: "Responsive Design", basic: true, pro: true, premium: true },
-  { title: "Custom Domain Setup", basic: true, pro: true, premium: true },
-  { title: "Number of Pages", basic: false, pro: true, premium: true },
-  { title: "Contact Form", basic: false, pro: true, premium: true },
-  { title: "SEO Optimization", basic: false, pro: true, premium: true },
-  { title: "Admin Panel", basic: false, pro: false, premium: true },
-  { title: "Logo Design", basic: false, pro: false, premium: true },
-  { title: "Booking System", basic: false, pro: false, premium: true },
-  { title: "WhatsApp Integration", basic: false, pro: false, premium: true },
+  { title: "Responsive Design", starter: true, premium: true, elite: true },
+  { title: "Custom Domain Setup", starter: true, premium: true, elite: true },
+  { title: "Pages Included", starter: "1–3 Pages", premium: "Up to 10 Pages", elite: true },
+  { title: "Contact Form", starter: true, premium: true, elite: true },
+  { title: "SEO Optimization", starter: "Basic", premium: "Standard", elite: true },
+  { title: "Admin Panel", starter: false, premium: true, elite: true },
+  { title: "Logo Design", starter: false, premium: "1 design", elite: true },
+  { title: "Booking System", starter: false, premium: "Basic", elite: true },
+  { title: "WhatsApp Integration", starter: false, premium: "Link Only", elite: true },
+  { title: "Blog & Updates Section", starter: false, premium: "Basic Blog", elite: true },
+  { title: "Client Timeline History", starter: false, premium: false, elite: true },
+  { title: "Case History PDFs", starter: false, premium: false, elite: true },
+  { title: "Support & Maintenance", starter: "15 Days", premium: "30 Days", elite: true },
 ];
 
 export default function PricingSection() {
@@ -80,24 +84,24 @@ export default function PricingSection() {
             className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-md transition-all"
           >
             <div className="p-6 space-y-4">
-              <h3 className="text-2xl font-bold">Basic</h3>
+              <h3 className="text-2xl font-bold">Starter</h3>
               <div className="flex items-end gap-1">
-                <span className="text-4xl font-bold">₹4,999</span>
+                <span className="text-4xl font-bold">₹5,999</span>
                 <span className="text-muted-foreground pb-1">/ one-time</span>
               </div>
-              <p className="text-muted-foreground">Perfect for solo professionals needing a simple online presence.</p>
+              <p className="text-muted-foreground">Ideal for new practices establishing their online presence.</p>
             </div>
             
             <div className="p-6 border-t border-border space-y-4">
               <div className="space-y-2">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center">
-                    {feature.basic ? (
+                    {feature.starter ? (
                       <Check size={18} className="text-green-500 mr-2" />
                     ) : (
                       <X size={18} className="text-muted-foreground mr-2" />
                     )}
-                    <span className={feature.basic ? "" : "text-muted-foreground"}>
+                    <span className={feature.starter ? "" : "text-muted-foreground"}>
                       {feature.title === "Number of Pages" ? "1 Page (Landing Page)" : feature.title}
                     </span>
                   </div>
@@ -128,24 +132,24 @@ export default function PricingSection() {
             </div>
             
             <div className="p-6 space-y-4 pt-10">
-              <h3 className="text-2xl font-bold">Pro</h3>
+              <h3 className="text-2xl font-bold">Premium</h3>
               <div className="flex items-end gap-1">
-                <span className="text-4xl font-bold">₹9,999</span>
+                <span className="text-4xl font-bold">₹12,999</span>
                 <span className="text-muted-foreground pb-1">/ one-time</span>
               </div>
-              <p className="text-muted-foreground">Ideal for growing businesses needing more functionality.</p>
+              <p className="text-muted-foreground">Perfect for established practices needing advanced features.</p>
             </div>
             
             <div className="p-6 border-t border-border space-y-4">
               <div className="space-y-2">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center">
-                    {feature.pro ? (
+                    {feature.premium ? (
                       <Check size={18} className="text-green-500 mr-2" />
                     ) : (
                       <X size={18} className="text-muted-foreground mr-2" />
                     )}
-                    <span className={feature.pro ? "" : "text-muted-foreground"}>
+                    <span className={feature.premium ? "" : "text-muted-foreground"}>
                       {feature.title === "Number of Pages" ? "3-5 Pages" : feature.title}
                     </span>
                   </div>
@@ -171,12 +175,12 @@ export default function PricingSection() {
             className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-md transition-all"
           >
             <div className="p-6 space-y-4">
-              <h3 className="text-2xl font-bold">Premium</h3>
+              <h3 className="text-2xl font-bold">Elite</h3>
               <div className="flex items-end gap-1">
-                <span className="text-4xl font-bold">₹14,999</span>
+                <span className="text-4xl font-bold">₹19,999</span>
                 <span className="text-muted-foreground pb-1">/ one-time</span>
               </div>
-              <p className="text-muted-foreground">Complete package for businesses needing a comprehensive web presence.</p>
+              <p className="text-muted-foreground">Comprehensive solution for premium practices with advanced needs.</p>
             </div>
             
             <div className="p-6 border-t border-border space-y-4">
